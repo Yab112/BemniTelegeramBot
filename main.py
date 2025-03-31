@@ -113,30 +113,30 @@ def format_message(days: int) -> str:
         )
     elif days <= 7:
         return clean_markdown(
-            f"🔥🔥🔥 **{days} DAYS LEFT!** 🔥🔥🔥\n\n"
-            "🚨🚨 **TIME IS RUNNING OUT!** 🚨🚨\n"
-            "⚠️ **NO ROOM FOR MISTAKES!** ⚠️\n"
-            "🛑 **FINAL PUSH!** 🛑\n"
-            "🔥 **WORK FAST!** 🔥 **WORK SMART!** 🔥 **NO EXCUSES!** 🚀\n"
-            "⏳ **EVERY SECOND COUNTS!** ⏳"
+            f"🔥🔥🔥 {days} DAYS LEFT! 🔥🔥🔥\n\n"
+            "🚨🚨 TIME IS RUNNING OUT! 🚨🚨\n"
+            "⚠️ NO ROOM FOR MISTAKES! ⚠️\n"
+            "🛑 FINAL PUSH! 🛑\n"
+            "🔥 WORK FAST! 🔥 WORK SMART! 🔥 NO EXCUSES! 🚀\n"
+            "⏳ EVERY SECOND COUNTS! ⏳"
         )
     elif days <= 14:
         return clean_markdown(
-            f"⚠️⚠️⚠️ **{days} DAYS REMAINING!** ⚠️⚠️⚠️\n\n"
-            "🚨 **DANGER ZONE!** 🚨\n"
-            "🔥 **DON'T GET COMPLACENT!** 🔥\n"
-            "⏳ **THE CLOCK IS MERCILESS!** ⏳\n"
-            "💀 **WASTE A DAY, REGRET IT FOREVER!** 💀\n"
-            "🚀 **FULL SPEED AHEAD!** 🚀"
+            f"⚠️⚠️⚠️ {days} DAYS REMAINING!** ⚠️⚠️⚠️\n\n"
+            "🚨 DANGER ZONE! 🚨\n"
+            "🔥 DON'T GET COMPLACENT! 🔥\n"
+            "⏳ THE CLOCK IS MERCILESS! ⏳\n"
+            "💀 WASTE A DAY, REGRET IT FOREVER! 💀\n"
+            "🚀 FULL SPEED AHEAD! 🚀"
         )
     else:
         return clean_markdown(
-            f"🟥🟥🟥 **{days} DAYS LEFT!** 🟥🟥🟥\n\n"
-            "🚨 **RED ALERT!** 🚨\n"
-            "🔥 **THE DEADLINE IS WATCHING YOU!** 🔥\n"
-            "💀 **EVERY HOUR YOU WASTE BRINGS DOOM!** 💀\n"
-            "⏳ **NO SECOND CHANCES!** ⏳\n"
-            "🛑 **START WORKING NOW OR SUFFER LATER!** 🛑"
+            f"🟥🟥🟥 {days} DAYS LEFT! 🟥🟥🟥\n\n"
+            "🚨 RED ALERT! 🚨\n"
+            "🔥 THE DEADLINE IS WATCHING YOU! 🔥\n"
+            "💀 EVERY HOUR YOU WASTE BRINGS DOOM! 💀\n"
+            "⏳ NO SECOND CHANCES! ⏳\n"
+            "🛑 START WORKING NOW OR SUFFER LATER! 🛑"
         )
 
 async def send_countdown(group_id: int):
