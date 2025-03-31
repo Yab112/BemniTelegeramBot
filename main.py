@@ -211,7 +211,7 @@ async def handle_deadline(update: Update, context: ContextTypes.DEFAULT_TYPE):
         confirmation_message = f"✅ Deadline Set\\! ✅\n\n" \
                                f"🗓 Date: `{deadline_date}`\n" \
                                f"⏳ Days Left: `{days_left}`\n\n" \
-                               "📢 Daily reminders will arrive at 9:00 AM UTC\\! ⏰"
+                               "📢 Daily reminders will arrive at 7:00 AM UTC\\! ⏰"
         await update.message.reply_text(
             clean_markdown(confirmation_message),
             parse_mode="MarkdownV2"
