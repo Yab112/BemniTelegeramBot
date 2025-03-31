@@ -6,6 +6,7 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from telegram import Update
 from telegram.ext import Application, ChatMemberHandler, MessageHandler, filters, ContextTypes
 from telegram.constants import ParseMode
+from apscheduler.triggers.cron import CronTrigger
 import re
 from dotenv import load_dotenv
 import os
@@ -199,9 +200,8 @@ async def handle_deadline(update: Update, context: ContextTypes.DEFAULT_TYPE):
         # Schedule new job
         job = scheduler.add_job(
             send_countdown,
-            "interval",  
+            trigger=CronTrigger(hour=7, minute=0, timezone="Africa/Addis_Ababa"),
             args=[group_id],
-            minutes=4, 
             id=f"countdown_{group_id}"
         )
 
