@@ -1,0 +1,33 @@
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environment
+venv/
+env/
+
+# Ignore environment variables
+.env
+config.ini
+
+# Ignore database files (if any local SQLite files)
+*.sqlite3
+*.db
+
+# Ignore logs and temporary files
+logs/
+*.log
+*.out
+*.pid
+*.swp
+
+# Ignore VS Code settings (if using VS Code)
+.vscode/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Railway and deployment files (if necessary)
+railway/
