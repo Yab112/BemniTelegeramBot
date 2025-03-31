@@ -7,8 +7,15 @@ from telegram import Update
 from telegram.ext import Application, ChatMemberHandler, MessageHandler, filters, ContextTypes
 from telegram.constants import ParseMode
 import re
+from dotenv import load_dotenv
+import os
 
 
+load_dotenv()
+
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+DB_URL = os.getenv("DB_URL")
+                   
 # Logging setup
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -16,11 +23,6 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# Bot token (replace with your actual token)
-BOT_TOKEN = "7741416829:AAEd2CGEMJHd6O-hwS8x9FHzSeqLzxqTjzU"
-
-# PostgreSQL database configuration
-# DB_URL = "postgresql://postgres:nardi@Me123#@localhost:5432/Telegrambot?connect_timeout=10&sslmode=prefer"
 
 # Store deadlines and jobs
 deadlines = {}
@@ -31,8 +33,6 @@ app = Application.builder().token(BOT_TOKEN).read_timeout(30).write_timeout(30) 
 
 # PostgreSQL connection pool
 async def create_db_pool():
-    DB_URL = "postgresql://postgres:nardi%40Me123%23@localhost:5432/Telegrambot"
-    
     try:
         pool = await asyncpg.create_pool(DB_URL)
         
