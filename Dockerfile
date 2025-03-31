@@ -15,4 +15,4 @@ COPY . .
 EXPOSE 8000
 
 # Run the bot
-CMD ["python", "bot/app.py"]
+CMD ["python", "main.py"]
